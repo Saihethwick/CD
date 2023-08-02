@@ -1,17 +1,17 @@
 #include<stdio.h>
-#include<math.h>
-#include<string.h>
 #include<ctype.h>
 #include<stdlib.h>
+#include<string.h>
+#include<math.h>
 int main()
 {
- int x=0, n, i=0,j=0;
- void *mypointer,*T4Tutorials_address[5];
- char ch,T4Tutorials_Search,T4Tutorials_Array2[15],T4Tutorials_Array3[15],c;
- printf("Input the expression ending with $ sign:");
+ int i=0,j=0,x=0,n;
+ void *p,*add[5];
+ char ch,srch,b[15],d[15],c;
+ printf("Expression terminated by $:");
  while((c=getchar())!='$')
  {
-  T4Tutorials_Array2[i]=c;
+  b[i]=c;
   i++;
  }
  n=i-1;
@@ -19,20 +19,20 @@ int main()
  i=0;
  while(i<=n)
  {
-  printf("%c",T4Tutorials_Array2[i]);
+  printf("%c",b[i]);
   i++;
- }
- printf("\n Symbol Table display\n");
-printf("Symbol \t addr \t type");
+}
+ printf("\n Symbol Table\n");
+ printf("Symbol \t addr \t type");
  while(j<=n)
  {
-  c=T4Tutorials_Array2[j];
+  c=b[j];
   if(isalpha(toascii(c)))
   {
-   mypointer=malloc(c);
-   T4Tutorials_address[x]=mypointer;
-   T4Tutorials_Array3[x]=c;
-   printf("\n%c \t %d \t identifier\n",c,mypointer);
+   p=malloc(c);
+   add[x]=p;
+   d[x]=c;
+   printf("\n%c \t %d \t identifier\n",c,p);
    x++;
    j++;
   }
@@ -41,10 +41,10 @@ printf("Symbol \t addr \t type");
    ch=c;
    if(ch=='+'||ch=='-'||ch=='*'||ch=='=')
    {
-    mypointer=malloc(ch);
-    T4Tutorials_address[x]=mypointer;
-    T4Tutorials_Array3[x]=ch;
-    printf("\n %c \t %d \t operator\n",ch,mypointer);
+    p=malloc(ch);
+    add[x]=p;
+    d[x]=ch;
+printf("\n %c \t %d \t operator\n",ch,p);
     x++;
     j++;
    }
