@@ -82,3 +82,16 @@ int main(int argc, char *argv[]) {
     cleanupWordFrequencies();
     return 0;
 }
+********************************************************************************************************************************
+Output:
+C:\Users\harsh>set path=C:\Program Files (x86)\GnuWin32\bin
+
+C:\Users\harsh>flex freq.l.txt
+
+C:\Users\harsh>set path=C:\MinGW\bin
+
+C:\Users\harsh>gcc lex.yy.c
+
+C:\Users\harsh>a
+enter: The sky is blue, rise is red.
+word frequency:is=2
