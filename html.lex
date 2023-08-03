@@ -15,7 +15,7 @@ return 1;
 
 int main()
 {
-yyin=fopen("C:\\Users\\P Sai vinitha\\h.html","r");
+yyin=fopen("C:\\Users\\Sai Harshitha</head\\h.html","r");
 yyout=fopen("output.txt","w");
 yylex();
 return 0;
@@ -30,5 +30,12 @@ C:\Users\harsh>set path=C:\MinGW\bin
 C:\Users\harsh>gcc lex.yy.c
 
 C:\Users\harsh>a
-
+<html>
+<head>
+<lhead>
+<body>
+<h1>My heading</h1>
+<p>My paragraph.</p>
+</body>
+</html>
 
