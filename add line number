@@ -16,6 +16,11 @@ return 0;
 }
 *************************************************************************************************************
 Output:
+C:\Users\harsh>set path=C:\Program Files (x86)\GnuWin32\bin
+C:\Users\harsh>flex addline.l.txt
+C:\Users\harsh>set path=C:\MinGW\bin
+C:\Users\harsh>gcc lex.yy.c
+C:\Users\harsh>a
 1 #include<stdio.h>
 2 // Driver Code
 3 int main()
